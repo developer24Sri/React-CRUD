@@ -7,7 +7,7 @@ export default function Home() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/users")
+      .get("https://react-crud-ops.netlify.app/users")
       .then((res) => setData(res.data))
       .catch((err) => console.log(err));
   }, []);
@@ -16,7 +16,7 @@ export default function Home() {
     const confirmDelete = window.confirm("Would you like to delete?");
     if (confirmDelete) {
       axios
-        .delete(`http://localhost:3000/users/${id}`)
+        .delete(`https://react-crud-ops.netlify.app/${id}`)
         .then(() => {
           setData(data.filter((item) => item.id !== id));
         })

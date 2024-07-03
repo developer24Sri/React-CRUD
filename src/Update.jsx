@@ -14,7 +14,7 @@ export default function Update() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/users/` + id)
+      .get(`https://react-crud-ops.netlify.app/users/` + id)
       .then((res) => {
         setvalues(res.data);
       })
@@ -24,7 +24,7 @@ export default function Update() {
   function handleUpdate(e) {
     e.preventDefault();
     axios
-      .put("http://localhost:3000/users/" + id, values)
+      .put("https://react-crud-ops.netlify.app/users/" + id, values)
       .then((res) => {
         console.log(res);
         navigate("/");

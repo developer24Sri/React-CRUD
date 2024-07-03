@@ -8,7 +8,7 @@ export default function Read() {
   const { id } = useParams();
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/users/` + id)
+      .get(`https://react-crud-ops.netlify.app/users/` + id)
       .then((res) => setdata(res.data))
       .catch((err) => console.log(err));
   }, []);

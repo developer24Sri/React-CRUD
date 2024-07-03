@@ -14,7 +14,7 @@ export default function Create() {
   function handleSubmit(e) {
     e.preventDefault();
     axios
-      .post("http://localhost:3000/users", values)
+      .post("https://react-crud-ops.netlify.app/users", values)
       .then((res) => {
         console.log(res);
         navigate("/");
