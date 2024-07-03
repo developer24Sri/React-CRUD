@@ -7,7 +7,7 @@ export default function Home() {
 
   useEffect(() => {
     axios
-      .get("https://react-crud-ops.netlify.app/users")
+      .get("https://developer24sri.github.io/host_api/db.json/users")
       .then((res) => setData(res.data))
       .catch((err) => console.log(err));
   }, []);
@@ -16,7 +16,7 @@ export default function Home() {
     const confirmDelete = window.confirm("Would you like to delete?");
     if (confirmDelete) {
       axios
-        .delete(`https://react-crud-ops.netlify.app/${id}`)
+        .delete(`https://developer24sri.github.io/host_api/db.json/${id}`)
         .then(() => {
           setData(data.filter((item) => item.id !== id));
         })

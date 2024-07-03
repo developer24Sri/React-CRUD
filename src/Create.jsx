@@ -14,7 +14,7 @@ export default function Create() {
   function handleSubmit(e) {
     e.preventDefault();
     axios
-      .post("https://react-crud-ops.netlify.app/users", values)
+      .post("https://developer24sri.github.io/host_api/db.json/users", values)
       .then((res) => {
         console.log(res);
         navigate("/");

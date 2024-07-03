@@ -14,7 +14,7 @@ export default function Update() {
 
   useEffect(() => {
     axios
-      .get(`https://react-crud-ops.netlify.app/users/` + id)
+      .get(`https://developer24sri.github.io/host_api/db.json/users/` + id)
       .then((res) => {
         setvalues(res.data);
       })
@@ -24,7 +24,10 @@ export default function Update() {
   function handleUpdate(e) {
     e.preventDefault();
     axios
-      .put("https://react-crud-ops.netlify.app/users/" + id, values)
+      .put(
+        "https://developer24sri.github.io/host_api/db.json/users/" + id,
+        values
+      )
       .then((res) => {
         console.log(res);
         navigate("/");
