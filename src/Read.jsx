@@ -8,7 +8,7 @@ export default function Read() {
   const { id } = useParams();
   useEffect(() => {
     axios
-      .get(`https://developer24sri.github.io/host_api/db.json/users/` + id)
+      .get(`https://developer24sri.github.io/host_api/db.json/` + id)
       .then((res) => setdata(res.data))
       .catch((err) => console.log(err));
   }, []);

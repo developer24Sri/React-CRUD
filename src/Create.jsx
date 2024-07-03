@@ -14,7 +14,7 @@ export default function Create() {
   function handleSubmit(e) {
     e.preventDefault();
     axios
-      .post("https://developer24sri.github.io/host_api/db.json/users", values)
+      .post("https://developer24sri.github.io/host_api/db.json/", values)
       .then((res) => {
         console.log(res);
         navigate("/");

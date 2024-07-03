@@ -14,7 +14,7 @@ export default function Update() {
 
   useEffect(() => {
     axios
-      .get(`https://developer24sri.github.io/host_api/db.json/users/` + id)
+      .get(`https://developer24sri.github.io/host_api/db.json/` + id)
       .then((res) => {
         setvalues(res.data);
       })
@@ -24,10 +24,7 @@ export default function Update() {
   function handleUpdate(e) {
     e.preventDefault();
     axios
-      .put(
-        "https://developer24sri.github.io/host_api/db.json/users/" + id,
-        values
-      )
+      .put("https://developer24sri.github.io/host_api/db.json/" + id, values)
       .then((res) => {
         console.log(res);
         navigate("/");

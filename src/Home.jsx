@@ -7,7 +7,7 @@ export default function Home() {
 
   useEffect(() => {
     axios
-      .get("https://developer24sri.github.io/host_api/db.json/users")
+      .get("https://developer24sri.github.io/host_api/db.json/")
       .then((res) => setData(res.data))
       .catch((err) => console.log(err));
   }, []);
