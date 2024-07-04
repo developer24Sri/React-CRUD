@@ -14,7 +14,7 @@ export default function Create() {
   function handleSubmit(e) {
     e.preventDefault();
     axios
-      .post("https://developer24sri.github.io/host_api/db.json/", values)
+      .post("https://api-storage-vat.vercel.app/users", values)
       .then((res) => {
         console.log(res);
         navigate("/");
