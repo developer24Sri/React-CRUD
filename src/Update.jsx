@@ -32,9 +32,13 @@ export default function Update() {
       .put(`https://api-storage-vat.vercel.app/users/${id}`, values)
       .then((res) => {
         console.log(res);
-        navigate("/");
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        console.log(err);
+      })
+      .finally(() => {
+        navigate("/");
+      });
   }
 
   return (

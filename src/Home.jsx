@@ -15,7 +15,8 @@ export default function Home() {
       const response = await axios.get(
         "https://api-storage-vat.vercel.app/users"
       );
-      setData(response.data.users); // Assuming 'users' is the key containing your array of user objects
+      setData(response.data);
+      console.log(response.data);
       setLoading(false);
     } catch (error) {
       console.error("Error fetching data: ", error);
